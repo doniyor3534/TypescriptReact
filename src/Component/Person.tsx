@@ -1,11 +1,5 @@
-import React from 'react'
+import {personType} from './Pesron.types'
 
-type personType={
-    names:{
-        name:string
-        fristname:string
-    }
-}
 
 export default function Person(props:personType) {
   return (

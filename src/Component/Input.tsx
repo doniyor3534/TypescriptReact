@@ -6,10 +6,10 @@ type inputprops={
 
 
 
-export default function Input(props:inputprops) {
+export default function Input({value,changehandle}:inputprops) {
    
   return (
-    <input type="text" value={props.value} onChange={props.changehandle} />
+    <input type="text" value={value} onChange={changehandle} />
   )
 }
 
