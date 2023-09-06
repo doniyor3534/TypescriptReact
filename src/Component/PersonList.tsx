@@ -1,6 +1,6 @@
 import React from 'react'
 
-type personlistType={
+export type personlistType={
     data: {
         name: string;
         fristname: string;

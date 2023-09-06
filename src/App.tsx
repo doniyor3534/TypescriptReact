@@ -19,6 +19,16 @@ import { UserContextProvider } from './Component/context/UserContextT';
 import UserContextfun from './Component/context/User';
 import Domref from './Component/ref/Domref';
 import Mutableref from './Component/ref/Mutableref';
+import { Counter } from './Component/class/CounterClass';
+import Private from './Component/Auth/Private';
+import Profile from './Component/Auth/Profile';
+import Lists from './Component/generation/Lists';
+import RandomNumber from './Component/restriction/RandomNumber';
+import Toast from './Component/templateliture/Toast';
+import CustomButton from './Component/Html/CustomButton';
+import Curtoninput from './Component/Html/Curtoninput';
+import { CustomComponent } from './Component/Html/CustomComponent';
+import { Textpolimoghic } from './Component/polimoghic/Textpolimoghic';
 
 function App() {
   const person = {
@@ -82,6 +92,30 @@ function App() {
       {/* /////useref */}
       <Domref/>
       <Mutableref/>
+      {/* //////////////Classsss */}
+      <Counter message={'salom Class'} />
+      {/* ////////////////Auth */}
+      <Private islogdenin={false} component={Profile}/>
+      {/* ///////////////Generation */}
+      <Lists items={[1,2,3,4]} onClick={(value)=>console.log(value) } />
+      {/* /////////////retriction */}
+      <RandomNumber value='Doniyorbek' isPositive  />
+      {/* ///////////////Templateliture (toast) */}
+      <Toast position='center' />
+      {/* ////////////Html button input */}
+      <CustomButton variant='primary' onClick={()=>console.log('Click') }  >
+          Primary button
+      </CustomButton>
+      <Curtoninput type='text' placeholder='lsslslslls......' />
+      {/* //////////////////CustomComponent (tyoeOf copy type) */}
+      <CustomComponent name='dkdkdk'/>
+      {/* ////////////////Polimoghic  */}
+      <Textpolimoghic as={'h1'} size='lg' color='secondary'  >
+          text polimoghic size color children
+      </Textpolimoghic>
+      <Textpolimoghic htmlFor='someId' as={'label'} size='lg' color='secondary'  >
+          text polimoghic size color children
+      </Textpolimoghic>
     </div>
   );
 }

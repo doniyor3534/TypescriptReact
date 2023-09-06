@@ -2,7 +2,7 @@
 type greetprops={
     name:string
     count?:number
-    islogdenin:boolean
+    islogdenin?:boolean
 }
 
 export default function Greet(props:greetprops) {
